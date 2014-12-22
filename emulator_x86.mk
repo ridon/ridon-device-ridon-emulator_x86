@@ -16,11 +16,10 @@ $(call inherit-product, device/generic/x86/mini_x86.mk)
 
 $(call inherit-product, device/generic/mini-emulator-armv7-a-neon/mini_emulator_common.mk)
 
+$(call inherit-product, vendor/ridon/config/common_full.mk)
+
 LOCAL_KERNEL := prebuilts/qemu-kernel/x86/kernel-qemu
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
-
-PRODUCT_PACKAGES += \
-	Trebuchet
 
 
